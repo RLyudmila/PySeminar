@@ -5,3 +5,10 @@
 #100 >>> Сумма чисел числа 100 равна 1
 
 number=int(input('Введите трех значное число'))
+
+num1=number//10//10
+num2=number//10%10
+num3=number%10
+result=num1+num2+num3
+print (f'сумма чисел числа {number} равна {result}')
+
