@@ -8,3 +8,8 @@
 # 385916 >>> yes
 # 123456 >>> no
 
+number=int(input('Введите цифру билета'))
+sum1=number//1000//100 +number//1000//10%10 +number//1000%10
+sum2=number%1000//100 +number%1000//10%10 +number%1000%10
+
+print('YES' if sum1==sum2 else "NO")
