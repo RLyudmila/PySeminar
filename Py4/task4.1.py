@@ -12,9 +12,12 @@
 # Input2: 3 9 12 15 18
 # Output: Повторяющихся чисел нет
 
-a = set([int(x) for x in input().split()])
-b = set([int(x) for x in input().split()])
-c = set(a.intersection(b))
-c= list (c)
-c.sort()
-print(*c)
+list_1 = set([int(x) for x in input().split()])
+list_2 = set([int(x) for x in input().split()])
+if set(list_1.intersection(list_2)):
+    list_3 = set(list_1.intersection(list_2))
+    list_3= list (list_3)
+    list_3.sort()
+    print(*list_3)
+else:
+    print('Повторяющихся чисел нет')
