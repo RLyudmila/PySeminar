@@ -30,5 +30,4 @@ if num_ber[0] + num_ber[-1] + num_ber[-2] > maxsum:
  		maxsum = num_ber[0] + num_ber[-1] + num_ber[-2]
 if num_ber[0] + num_ber[1] + num_ber[-1] > maxsum:
  			maxsum = num_ber[0] + num_ber[1] + num_ber[-1]
-	
 print("максимальное количество ягод ", maxsum, "для куста ", k)
