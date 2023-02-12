@@ -15,18 +15,20 @@
 # Input1: 11, 92, 1, 42, 15, 12, 11, 81
 # Output1: Макс. кол-во ягод 184, собрано для куста 1
 
-n = int(input())
-a = list(map(int, input().split()))
-
+num_bush = 8
+num_ber = [11, 92, 1, 42, 15, 12, 11, 81]
+k=0
 maxsum = 0
 
-for i in range(n):
-	cursum = sum(a[i:i+3])
+for i in range(num_bush):
+	cursum = sum(num_ber[i:i+3])
+	
 	if cursum > maxsum:
 		maxsum = cursum
-if a[0] + a[-1] + a[-2] > maxsum:
-	maxsum = a[0] + a[-1] + a[-2]
-if a[0] + a[1] + a[-1] > maxsum:
-	maxsum = a[0] + a[1] + a[-1]
-
-print(maxsum)
+		k=i
+if num_ber[0] + num_ber[-1] + num_ber[-2] > maxsum:
+ 		maxsum = num_ber[0] + num_ber[-1] + num_ber[-2]
+if num_ber[0] + num_ber[1] + num_ber[-1] > maxsum:
+ 			maxsum = num_ber[0] + num_ber[1] + num_ber[-1]
+	
+print("максимальное количество ягод ", maxsum, "для куста ", k)
