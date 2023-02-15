@@ -15,7 +15,6 @@
 # в одну строку, вам понадобится распаковка и Comprehension или map
 
 first_element, step, number = map(int, input().split())
-for i in range(number):
-    n_element = first_element + i*step
-    print(" ".join(map(str, n_element)))
+n_element = [first_element + i*step for i in range(number)]
+print(n_element)
     
