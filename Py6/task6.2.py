@@ -17,11 +17,12 @@
 
 
 lst1=[-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
-maxi,mini=map(int, input().split())
-masi=[]
-if maxi>=mini:
-   for i in range(len(lst1)):
-        if maxi>=lst1[i] and mini<=lst1[i]:
-          masi.append(i)
-   print("Кол-во:",len(masi))
-   print("Индексы:",masi)
+min_i,max_i=map(int, input().split())
+k=0
+mas_i=[]
+for i in range(len(lst1)):
+    if lst1[i]<=max_i and lst1[i]>=min_i:
+        k=k+1
+        mas_i.append(i)
+print("Кол-во:",k)
+print("Индексы:",mas_i)
